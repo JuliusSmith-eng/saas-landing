@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApexAI — Next-Gen Analytics Platform</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-slate-950 text-slate-100 font-['Inter'] antialiased selection:bg-indigo-500 selection:text-white"
+  >
+    <!-- Header / Navbar -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <a
+          href="#"
+          class="flex items-center gap-2 text-xl font-bold tracking-tight text-white"
+        >
+          <i data-lucide="cpu" class="w-7 h-7 text-indigo-500"></i>
+          <span>Apex<span class="text-indigo-500">AI</span></span>
+        </a>
+
+        <nav
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400"
+        >
+          <a href="#features" class="hover:text-white transition-colors"
+            >Features</a
+          >
+          <a href="#pricing" class="hover:text-white transition-colors"
+            >Pricing</a
+          >
+          <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <a
+            href="#pricing"
+            class="hidden sm:inline-flex text-sm font-medium text-slate-300 hover:text-white transition-colors"
+            >Sign In</a
+          >
+          <a
+            href="#pricing"
+            class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-all shadow-lg shadow-indigo-500/20"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-36 pb-20 px-6 relative overflow-hidden">
+      <!-- Glow background -->
+      <div
+        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-indigo-500/20 blur-[120px] rounded-full pointer-events-none"
+      ></div>
+
+      <div class="max-w-5xl mx-auto text-center relative z-10">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-indigo-400 font-medium mb-8"
+        >
+          <span
+            class="flex h-2 w-2 rounded-full bg-indigo-500 animate-pulse"
+          ></span>
+          ApexAI 2.0 is now live
+        </div>
+
+        <h1
+          class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight"
+        >
+          Scale your analytics with <br />
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400"
+            >Intelligent AI Automation</span
+          >
+        </h1>
+
+        <p
+          class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+        >
+          Empower your business teams with real-time data insights, predictive
+          forecasting, and automated workflow integrations in seconds.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <a
+            href="#pricing"
+            class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-all shadow-lg shadow-indigo-500/25 flex items-center justify-center gap-2"
+          >
+            Start Free Trial
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a
+            href="#features"
+            class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold px-8 py-3.5 rounded-xl border border-slate-800 transition-all flex items-center justify-center gap-2"
+          >
+            <i data-lucide="play" class="w-4 h-4"></i> Watch Demo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section
+      id="pricing"
+      class="py-24 px-6 relative border-t border-slate-800/80"
+    >
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-5xl font-bold text-white mb-4">
+            Flexible pricing for teams of any size
+          </h2>
+          <p class="text-slate-400 text-lg">
+            Choose the best plan for your business and scale as you grow.
+          </p>
+
+          <!-- Toggle Switch (Monthly / Yearly) -->
+          <div
+            class="mt-8 inline-flex items-center gap-3 bg-slate-900 p-1.5 rounded-xl border border-slate-800"
+          >
+            <span
+              id="monthly-label"
+              class="text-sm font-semibold text-white px-3 py-1"
+              >Monthly</span
+            >
+            <button
+              id="pricing-toggle"
+              class="w-12 h-6 bg-indigo-600 rounded-full p-1 transition-colors relative focus:outline-none"
+            >
+              <div
+                id="toggle-circle"
+                class="w-4 h-4 bg-white rounded-full transition-transform translate-x-0"
+              ></div>
+            </button>
+            <span
+              id="yearly-label"
+              class="text-sm font-semibold text-slate-400 px-3 py-1 flex items-center gap-1.5"
+            >
+              Yearly
+              <span
+                class="bg-indigo-500/20 text-indigo-400 text-xs px-2 py-0.5 rounded-full border border-indigo-500/30 font-bold"
+                >Save 20%</span
+              >
+            </span>
+          </div>
+        </div>
+
+        <!-- Pricing Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          <!-- Starter Plan -->
+          <div
+            class="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-700 transition-all"
+          >
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Starter</h3>
+              <p class="text-slate-400 text-sm mb-6">
+                Perfect for solo founders and side projects.
+              </p>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span class="text-4xl font-bold text-white">$</span>
+                <span
+                  class="text-5xl font-extrabold text-white price-amount"
+                  data-monthly="29"
+                  data-yearly="23"
+                  >29</span
+                >
+                <span class="text-slate-400 text-sm ml-1 price-period"
+                  >/month</span
+                >
+              </div>
+              <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i> Up
+                  to 5 team members
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i>
+                  10,000 AI credits/mo
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i>
+                  Basic Analytics Dashboard
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i>
+                  Email support
+                </li>
+              </ul>
+            </div>
+            <a
+              href="#"
+              class="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl transition-colors text-center block"
+              >Get Started</a
+            >
+          </div>
+
+          <!-- Pro Plan (Featured) -->
+          <div
+            class="bg-slate-900 border-2 border-indigo-500 rounded-2xl p-8 flex flex-col justify-between relative shadow-2xl shadow-indigo-500/10"
+          >
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full"
+            >
+              Most Popular
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Pro</h3>
+              <p class="text-slate-400 text-sm mb-6">
+                Ideal for growing teams needing full power.
+              </p>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span class="text-4xl font-bold text-white">$</span>
+                <span
+                  class="text-5xl font-extrabold text-white price-amount"
+                  data-monthly="79"
+                  data-yearly="63"
+                  >79</span
+                >
+                <span class="text-slate-400 text-sm ml-1 price-period"
+                  >/month</span
+                >
+              </div>
+              <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i> Up
+                  to 25 team members
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i>
+                  100,000 AI credits/mo
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i>
+                  Advanced Real-time Reporting
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i>
+                  Custom API Integrations
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i>
+                  Priority 24/7 Support
+                </li>
+              </ul>
+            </div>
+            <a
+              href="#"
+              class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 rounded-xl transition-colors text-center block shadow-lg shadow-indigo-500/25"
+              >Start Free Trial</a
+            >
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div
+            class="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-700 transition-all"
+          >
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Enterprise</h3>
+              <p class="text-slate-400 text-sm mb-6">
+                Dedicated infrastructure for large organizations.
+              </p>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span class="text-4xl font-bold text-white">$</span>
+                <span
+                  class="text-5xl font-extrabold text-white price-amount"
+                  data-monthly="199"
+                  data-yearly="159"
+                  >199</span
+                >
+                <span class="text-slate-400 text-sm ml-1 price-period"
+                  >/month</span
+                >
+              </div>
+              <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i>
+                  Unlimited team members
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i>
+                  Unlimited AI credits
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i>
+                  Dedicated Account Manager
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-5 h-5 text-indigo-400"></i>
+                  Custom SLA & Security Compliance
+                </li>
+              </ul>
+            </div>
+            <a
+              href="#"
+              class="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl transition-colors text-center block"
+              >Contact Sales</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section
+      id="faq"
+      class="py-24 px-6 relative border-t border-slate-800/80 bg-slate-950"
+    >
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-slate-400">
+            Everything you need to know about ApexAI and our pricing plans.
+          </p>
+        </div>
+
+        <!-- FAQ Accordion Container -->
+        <div class="space-y-4">
+          <!-- Item 1 -->
+          <div
+            class="bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden faq-item"
+          >
+            <button
+              class="w-full p-6 text-left flex justify-between items-center text-white font-semibold text-lg hover:text-indigo-400 transition-colors faq-trigger"
+            >
+              <span>Can I change my plan later?</span>
+              <i
+                data-lucide="chevron-down"
+                class="w-5 h-5 text-slate-400 transition-transform duration-300 faq-icon"
+              ></i>
+            </button>
+            <div class="px-6 pb-6 text-slate-400 hidden faq-content">
+              Yes, you can upgrade, downgrade, or cancel your subscription at
+              any time directly from your account dashboard. Upgrades take
+              effect immediately.
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div
+            class="bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden faq-item"
+          >
+            <button
+              class="w-full p-6 text-left flex justify-between items-center text-white font-semibold text-lg hover:text-indigo-400 transition-colors faq-trigger"
+            >
+              <span>How does the 14-day free trial work?</span>
+              <i
+                data-lucide="chevron-down"
+                class="w-5 h-5 text-slate-400 transition-transform duration-300 faq-icon"
+              ></i>
+            </button>
+            <div class="px-6 pb-6 text-slate-400 hidden faq-content">
+              You get full access to all Pro features for 14 days without
+              entering a credit card. If you decide to continue, simply select a
+              plan at the end of the trial.
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div
+            class="bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden faq-item"
+          >
+            <button
+              class="w-full p-6 text-left flex justify-between items-center text-white font-semibold text-lg hover:text-indigo-400 transition-colors faq-trigger"
+            >
+              <span>Is my data secure with ApexAI?</span>
+              <i
+                data-lucide="chevron-down"
+                class="w-5 h-5 text-slate-400 transition-transform duration-300 faq-icon"
+              ></i>
+            </button>
+            <div class="px-6 pb-6 text-slate-400 hidden faq-content">
+              We use end-to-end SOC2 Type II encryption and industry-leading
+              security practices. Your data is stored safely and is never shared
+              with third parties.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-12 px-6">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-slate-400 text-sm"
+      >
+        <div class="flex items-center gap-2 font-bold text-white text-lg">
+          <i data-lucide="cpu" class="w-6 h-6 text-indigo-500"></i>
+          <span>Apex<span class="text-indigo-500">AI</span></span>
+        </div>
+        <p>© 2026 ApexAI Technologies Inc. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-white transition-colors"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:text-white transition-colors"
+            >Terms of Service</a
+          >
+          <a href="#" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
